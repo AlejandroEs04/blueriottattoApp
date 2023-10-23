@@ -1,0 +1,15 @@
+{
+  "name": "nombre-pagina",
+  "version": "1.0.0",
+  "description": "descripcion de la pagina",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./src/input.css -o ./public/dist/css/output.css --watch"
+  },
+  "author": "Alejandro Raphael Estrada Lopez",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}

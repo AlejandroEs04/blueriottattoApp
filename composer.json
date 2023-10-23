@@ -1,0 +1,20 @@
+{
+    "name": "citasapp",
+    "description": "Aplicacion web para generar y administrar las citas por parte del cliente",
+    "authors": [
+        {
+            "name": "Alejandro Raphael Estrada Lopez"
+        }
+    ],
+    "require": {
+        
+    },
+    "autoload": {
+        "psr-4": {
+            "Model\\" : "./models",
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Classes\\" : "./classes"
+        }
+    }
+}
