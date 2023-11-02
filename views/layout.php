@@ -8,18 +8,21 @@
     <title>NombrePagina</title>
 </head>
 <body class="bg-zinc-900" >
-    <header class="top-0 sticky bg-zinc-950">
-        <?php incluirModule("Header", null); ?>
-    </header>
-
-    <div class="grid grid-cols-2" >
-        <aside>
-            <img src="build/img/imagenInicio.webp">
+    <div class="flex flex-col md:flex-row" >
+        <aside class="flex max-h-80 md:max-h-none md:h-screen md:w-1/3 sticky top-0" >
+            <img src="build/img/imagenInicio.webp" class="object-cover" >
         </aside>
 
-        <main>
-            <?php echo $contenido; ?>
-        </main>
+        <div class="md:w-2/3">
+            <header class="top-0 sticky shadow-xl">
+                <?php incluirModule("Header", null); ?>
+            </header>
+
+            <main  >
+                <?php echo $contenido; ?>
+            </main>
+        </div>
+        
     </div>
     
 
