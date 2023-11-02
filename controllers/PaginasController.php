@@ -11,4 +11,10 @@ class PaginasController {
 
         ]);
     }
+
+    public static function setting(Router $router) {
+        $router->render('paginas/settings', [
+            
+        ]);
+    }
 }

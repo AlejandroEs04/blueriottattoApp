@@ -1,5 +1,8 @@
 <?php
 
+use Controllers\AdminController;
+use Controllers\AuthController;
+use Controllers\DateController;
 use Controllers\PaginasController;
 use MVC\Router;
 
@@ -9,9 +12,22 @@ $router = new Router();
 
 /** ZONA PUBLICA **/
 $router->get('/', [PaginasController::class, 'index']);
+$router->post('/', [PaginasController::class, 'index']);
+$router->get('/setting', [PaginasController::class, 'setting']);
+$router->get('/dating', [PaginasController::class, 'index']);
+$router->post('/dating', [PaginasController::class, 'index']);
+$router->get('/add-date', [DateController::class, 'date']);
+$router->post('/add-date', [DateController::class, 'date']);
+
+
+/** AUTH **/
+$router->get('/login', [AuthController::class, 'login']);
+$router->get('/login', [AuthController::class, 'login']);
+$router->get('/new-account', [AuthController::class, 'newAccount']);
+$router->get('/forget-password', [AuthController::class, 'forgetPassword']);
 
 /** ZONA PRIVADA **/
+$router->get('/admin', [AdminController::class, 'index']);
 
-/** LOGIN O LOGOUT **/
 
 $router->comprobarRutas();

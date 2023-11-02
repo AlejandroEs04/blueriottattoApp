@@ -26,7 +26,7 @@ class Router {
 
         /** Agregar las rutas protegidas **/
         $rutas_protegidas = [
-
+            '/'
         ];
 
         /** Identificar en que ruta se encuentra el usuario **/
@@ -49,7 +49,7 @@ class Router {
         /** Proteger las rutas **/
         // Identificamos la ruta en la que se esta, y si esta protegida y no estamos autenticados, se enviara al menu principal, si estamos identificados, deja accesar
         if(in_array($urlActual, $rutas_protegidas) && !$auth) {
-            header('Location: /');
+            header('Location: /login');
         }
 
         // Verificar que la ruta exista o no 
