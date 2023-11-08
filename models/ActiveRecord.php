@@ -105,43 +105,50 @@ class ActiveRecord {
     }
 
     // Obtener todos los registros
-    public function all() {
+    public static function all() {
         $query = "SELECT * FROM " . static::$tabla;
         $resultado = self::consultarSQL($query);
         return $resultado;
     }
 
     // Obtener un registro especifico por su id
-    public function find($id) {
+    public static function find($id) {
         $query = "SELECT * FROM " . static::$tabla . " WHERE id = ${id}";
         $resultado = self::consultarSQL($query);
         return array_shift($resultado);
     }
 
     // Obtener un numero limitado de registros
-    public function get($limit) {
+    public static function get($limit) {
         $query = "SELECT * FROM " . static::$tabla . " LIMIT ${limit}";
         $resultado = self::consultarSQL($query);
         return array_shift($resultado);
     }
 
     // Obtener registros en especifico 
-    public function where($columna, $valor) {
+    public static function where($columna, $valor) {
         $query = "SELECT * FROM " . static::$tabla . " WHERE ${columna} = '${valor}'";
         $resultado = self::consultarSQL($query);
         return array_shift($resultado);
     }
 
+    public static function getAllDate() {
+        $query = "SELECT * FROM citasview";
+        $resultado = self::consultarSQL($query);
+        return $resultado;
+    }
+
     // Crear el registro
     public function crear() {
         // Sanitizar los datos 
-        $atributos = $this->sanitizarAtributos();
+        $atributos = $this->sanitizarAtributos();   
 
         // Insertar en la base de datos 
         $query = "INSERT INTO " . static::$tabla . " ( ";
         $query .= join(', ', array_keys($atributos));
         $query .= " ) VALUES (' ";
-        $query .= " ')";
+        $query .= join("', '", array_values($atributos));
+        $query .= "')";
 
         // Resultado de la consulta 
         $resultado = self::$db->query($query);

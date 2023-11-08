@@ -2,13 +2,13 @@
     <div class="md:w-1/2 w-full px-4 md:px-0" >
         <h1 class="font-bold text-2xl uppercase text-blue-500" >Iniciar Sesion</h1>
         <p class="text-white font-light text-lg" >Ingresa con tus datos para tener acceso a tu cuenta</p>
-        <form class="mt-5 flex flex-col gap-5" >
+        <form class="mt-5 flex flex-col gap-5" method="post" action="/login" >
             <div class="flex flex-col items-start" >
                 <label class="text-white font-bold text-lg" >Usuario</label>
                 <input 
                     type="text" 
                     placeholder="Nombre de usuario" 
-                    name="userName"
+                    name="usuario"
                     class="p-2 w-full"
                 >
             </div>

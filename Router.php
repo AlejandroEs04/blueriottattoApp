@@ -23,8 +23,13 @@ class Router {
         // Comprobar si el usuario inicia sesion para entrar a las opciones de admin
         /** Verificar si utilizare admin **/
         $auth = $_SESSION['login'] ?? null;
+        $tipo = (int)$_SESSION['admin'] ?? null;
 
         /** Agregar las rutas protegidas **/
+        $rutas_admin = [
+            '/admin'
+        ];
+
         $rutas_protegidas = [
             '/'
         ];
@@ -50,6 +55,8 @@ class Router {
         // Identificamos la ruta en la que se esta, y si esta protegida y no estamos autenticados, se enviara al menu principal, si estamos identificados, deja accesar
         if(in_array($urlActual, $rutas_protegidas) && !$auth) {
             header('Location: /login');
+        } elseif(in_array($urlActual, $rutas_admin) && $tipo === 0) {
+            header('Location: /');
         }
 
         // Verificar que la ruta exista o no 

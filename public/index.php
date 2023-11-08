@@ -22,9 +22,11 @@ $router->post('/add-date', [DateController::class, 'date']);
 
 /** AUTH **/
 $router->get('/login', [AuthController::class, 'login']);
-$router->get('/login', [AuthController::class, 'login']);
+$router->post('/login', [AuthController::class, 'login']);
 $router->get('/new-account', [AuthController::class, 'newAccount']);
+$router->post('/new-account', [AuthController::class, 'newAccount']);
 $router->get('/forget-password', [AuthController::class, 'forgetPassword']);
+$router->get('/logout', [AuthController::class,'logOut']);
 
 /** ZONA PRIVADA **/
 $router->get('/admin', [AdminController::class, 'index']);

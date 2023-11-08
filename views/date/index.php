@@ -2,7 +2,7 @@
     <div class="md:w-1/2 w-full px-4 md:px-0" >
         <h1 class="font-bold text-2xl uppercase text-blue-500" >Agendar Cita</h1>
         <p class="text-white font-light text-lg" >Ingresa el dia, hora y tus datos para agendar la cita</p>
-        <form class="mt-5 flex flex-col gap-5" >
+        <form class="mt-5 flex flex-col gap-5" action="/add-date" method="post" >
             <div class="flex flex-col items-start" >
                 <label class="text-white font-bold text-lg" >Eliga el dia</label>
                 <input 
@@ -12,7 +12,7 @@
                 >
             </div>
 
-            <div class="flex flex-col items-start" >
+            <div class="flex flex-col items-start">
                 <label class="text-white font-bold text-lg" >Seleccione la hora</label>
                 <select
                     class="p-2 w-full"
@@ -20,8 +20,8 @@
                 >
                     <option>-- Horarios disponibles --</option>
                     <?php for($i=10; $i<=20; $i++): ?>
-                        <option><?php echo $i ?>:00</option>
-                        <option><?php echo $i ?>:30</option>
+                        <option value="<?php echo $i . ":00"; ?>" ><?php echo $i ?>:00</option>
+                        <option value="<?php echo $i . ":30"; ?>"><?php echo $i ?>:30</option>
                     <?php endfor; ?>
                 </select>
             </div>
@@ -33,8 +33,10 @@
                     name="nombre"
                     placeholder="Nombre"
                     class="p-2 w-full"
-                    value="Alejandro"
-                    disabled
+                    <?php if($nombre && $numero): ?>
+                        value="<?php echo $nombre; ?>"
+                        disabled
+                    <?php endif; ?>
                 >
             </div>
 
@@ -45,8 +47,10 @@
                     name="numero"
                     placeholder="Numero"
                     class="p-2 w-full"
-                    value="811036783"
-                    disabled
+                    <?php if($nombre && $numero): ?>
+                        value="<?php echo $numero; ?>"
+                        disabled
+                    <?php endif; ?>
                 >
             </div>
 

@@ -9,7 +9,7 @@
 </head>
 <body class="bg-zinc-900" >
     <div class="flex flex-col md:flex-row" >
-        <aside class="flex max-h-80 md:max-h-none md:h-screen md:w-1/3 sticky top-0" >
+        <aside class="flex max-h-80 md:max-h-none md:h-screen md:w-1/3" >
             <img src="build/img/imagenInicio.webp" class="object-cover" >
         </aside>
 
