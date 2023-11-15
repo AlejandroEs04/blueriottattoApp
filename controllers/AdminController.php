@@ -5,6 +5,7 @@ namespace Controllers;
 use Model\Cita;
 use MVC\Router;
 use Model\CitaUsuario;
+use Model\Comercio;
 
 class AdminController {
     public static function index(Router $router) {
@@ -61,6 +62,14 @@ class AdminController {
 
         $router->render("admin/history" , [
             'citas' => $citas
+        ]);
+    }
+
+    public static function setting(Router $router) {
+        $comercio = Comercio::all();
+
+        $router->render("admin/setting", [
+            'comercio' => $comercio[0]
         ]);
     }
 }

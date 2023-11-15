@@ -1,4 +1,4 @@
-<div class="flex justify-around text-white py-2" >
+<div class="flex justify-around text-white py-2 bg-zinc-950" >
     <div>
         <h1>Logo</h1>
     </div>

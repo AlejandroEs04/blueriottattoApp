@@ -31,5 +31,7 @@ $router->get('/logout', [AuthController::class,'logOut']);
 /** ZONA PRIVADA **/
 $router->get('/admin', [AdminController::class, 'index']);
 $router->get('/admin/dates', [AdminController::class, 'historial']);
+$router->get('/admin/setting', [AdminController::class, 'setting']);
+$router->post('/admin/setting', [AdminController::class, 'setting']);
 
 $router->comprobarRutas();
