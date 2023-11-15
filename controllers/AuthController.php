@@ -16,7 +16,7 @@ class AuthController {
             $alertas = $auth->validarLogin();
 
             if(empty($alertas)) {
-                $usuario = Usuario::where("usuario", $auth->usuario);
+                $usuario = Usuario::whereOne("usuario", $auth->usuario);
 
                 if($usuario) {
                     if($usuario->comprobarPassword($auth->password)) {

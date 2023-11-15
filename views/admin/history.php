@@ -1,7 +1,7 @@
 <div class="flex flex-col items-center justify-center mt-10" >
     <div class="md:w-2/3 w-full px-4 md:px-0" >
-        <h1 class="font-bold text-2xl uppercase text-blue-500" >Administrar Citas</h1>
-        <p class="text-white font-light text-lg" >Aqui podras administrar las citas y ver su informacion</p>
+        <h1 class="font-bold text-2xl uppercase text-blue-500" >Historial de citas</h1>
+        <p class="text-white font-light text-lg" >Aqui podras ver las citas previas</p>  
         <div class="w-full mt-5" >
             <div>
                 <p class="font-bold text-start text-lg text-blue-400" >Informacion de la cita</p>
@@ -24,19 +24,11 @@
 
                         <div class="w-1/5 flex flex-col gap-1" >
                             <h4 class="font-bold text-lg" >Finalizado:</h4>
-                            <form action="/admin" >
+                            <form action="/admin/dates" >
                                 <input type="number" name="id" value="<?php  echo $cita->id; ?>" hidden >
-                                <input type="number" name="fin" value="1" hidden >
-                                <button class="bg-blue-500 px-2 py-1 text-white font-bold rounded hover:bg-blue-600 transition-colors w-full" >
-                                    Terminado
-                                </button>
-                            </form>
-
-                            <form action="/admin" >
-                                <input type="number" name="id" value="<?php  echo $cita->id; ?>" hidden >
-                                <input type="number" name="cancelar" value="1" hidden >
+                                <input type="number" name="eliminar" value="1" hidden >
                                 <button class="bg-red-500 px-2 py-1 text-white font-bold rounded hover:bg-red-600 transition-colors w-full" >
-                                    Cancelar
+                                    Eliminar
                                 </button>
                             </form>
                             

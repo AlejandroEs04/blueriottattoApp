@@ -3,6 +3,8 @@
 namespace Model;
 
 class CitaUsuario extends ActiveRecord {
+    protected static $tabla = 'citasview';
+    public $id;
     public $fecha;
     public $hora;
     public $nombre;
@@ -11,6 +13,7 @@ class CitaUsuario extends ActiveRecord {
     public $finalizada;
 
     public function __construct($args = []) {
+        $this->id = $args["id"];
         $this->fecha = $args["fecha"];
         $this->hora = $args["hora"];
         $this->nombre = $args["nombre"];
