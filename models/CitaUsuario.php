@@ -9,6 +9,7 @@ class CitaUsuario extends ActiveRecord {
     public $hora;
     public $nombre;
     public $apellido;
+    public $usuarioID;
     public $numero;
     public $finalizada;
 
@@ -20,5 +21,6 @@ class CitaUsuario extends ActiveRecord {
         $this->apellido = $args["apellido"];
         $this->numero = $args["numero"];
         $this->finalizada = $args["finalizada"];
+        $this->usuarioID = $args["usuarioID"];
     }
 }

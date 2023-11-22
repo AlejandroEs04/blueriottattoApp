@@ -34,4 +34,6 @@ $router->get('/admin/dates', [AdminController::class, 'historial']);
 $router->get('/admin/setting', [AdminController::class, 'setting']);
 $router->post('/admin/setting', [AdminController::class, 'setting']);
 
+$router->get('/view', [PaginasController::class, 'view']);
+
 $router->comprobarRutas();
