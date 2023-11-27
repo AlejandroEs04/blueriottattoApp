@@ -3,7 +3,7 @@
         'name' => '2004e/citas-app',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '622f9ad44831af2301b67f50037e3ba6c762c69e',
+        'reference' => '32edc9c175b52211e50b610895dcad018062cad8',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '2004e/citas-app' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '622f9ad44831af2301b67f50037e3ba6c762c69e',
+            'reference' => '32edc9c175b52211e50b610895dcad018062cad8',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

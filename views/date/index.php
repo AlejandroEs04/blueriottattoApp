@@ -1,4 +1,4 @@
-<div class="flex flex-col items-center justify-center my-5" >
+<div class="flex flex-col items-center justify-center my-8" >
     <div class="md:w-1/2 w-full px-4 md:px-0" >
         <h1 class="font-bold text-2xl uppercase text-blue-500" >Agendar Cita</h1>
         <p class="text-white font-light text-lg" >Ingresa el dia, hora y tus datos para agendar la cita</p>
@@ -62,20 +62,24 @@
             </div>
 
             <div class="flex" >
-                <div class="w-1/3 flex flex-col items-start" >
+                <div class="w-2/5 flex flex-col items-start" >
                     <label class="text-white font-bold text-lg" >Tamaño</label>
                     <div class="flex items-center gap-2" >
                         <input type="radio" id="pequeno" name="tamano" value="pequeño">
                         <label class="text-white" for="pequeno" >Pequeño</label>
                     </div>
+                    <p class="text-gray-400 text-xs" >Precio: $300 MXN     Tiempo aprox. 40 mins</p>
+                    <p class="text-gray-400 text-xs">Medidas: 5-10cm</p>
 
-                    <div class="flex items-center gap-2" >
+                    <div class="flex items-center gap-2 mt-5" >
                         <input type="radio" id="mediano" name="tamano" value="mediano">
                         <label class="text-white" for="mediano" >Mediano</label>
                     </div>
+                    <p class="text-gray-400 text-xs" >Precio: $500 MXN     Tiempo aprox. 1 hr</p>
+                    <p class="text-gray-400 text-xs">Medidas: 10-15cm</p>
                 </div>
 
-                <div class="w-2/3 flex flex-col items-start" >
+                <div class="w-3/5 flex flex-col items-start" >
                     <label class="text-white font-bold text-lg" for="image" >Imagen del diseño</label>
                     <input 
                         type="file" 
