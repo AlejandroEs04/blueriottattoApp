@@ -1,6 +1,7 @@
 <div class="flex justify-around text-white py-2 bg-zinc-950" >
-    <div>
-        <h1>Logo</h1>
+    <div class="flex gap-2 items-center" >
+        <img src="/build/img/logo.jpg" alt="logo de blueriottatto" class="w-10 rounded-full" >
+        <h1 class="text-3xl text-blue-600 uppercase font-bold" >Blueriottatto</h1>
     </div>
 
     <nav class="flex gap-2 items-center" >
