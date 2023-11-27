@@ -7,12 +7,18 @@
                 <p class="font-bold text-start text-lg text-blue-400" >Informacion de la cita</p>
             </div>
 
+            <?php if(empty($citas)): ?>
+                <div>
+                    <p class="text-white font-bold text-2xl" >Aun no hay citas disponibles</p>
+                </div>
+            <?php endif; ?>
+
             <div class="flex flex-col gap-4 mt-2" >
                 <?php foreach($citas as $cita): ?>
                     <div class="bg-gray-200 w-full p-4 rounded-lg flex gap-4" >
                         <div class="w-3/5 border-r-2 border-r-gray-500" >
                             <h4 class="font-bold text-lg" >Cliente:</h4>
-                            <p><?php echo $cita->nombre . " " . $cita->apellido; ?></p>
+                            <p><?php echo $cita->nombre; ?></p>
                             <p><?php echo $cita->numero; ?></p>
                         </div>
 

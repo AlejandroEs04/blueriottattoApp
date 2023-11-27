@@ -3,6 +3,7 @@
 namespace Controllers;
 
 use Model\Cita;
+use Model\DisTatuaje;
 use MVC\Router;
 use Model\CitaUsuario;
 use Model\Comercio;
@@ -13,7 +14,13 @@ class AdminController {
 
         if($_GET['cancelar']) { 
             $cita = new Cita($_GET);
+            $citaInfo['citaID'] = $_GET['id'];
+            $citaDis = new DisTatuaje($citaInfo);
 
+            // Eliminar el diseno
+            $citaDis->eliminarDis();
+            
+            // Eliminar la cita
             $res = $cita->eliminar();
 
             if($res) {
@@ -52,7 +59,13 @@ class AdminController {
 
         if($_GET['eliminar']) { 
             $cita = new Cita($_GET);
+            $citaInfo['citaID'] = $_GET['id'];
+            $citaDis = new DisTatuaje($citaInfo);
 
+            // Eliminar el diseno
+            $citaDis->eliminarDis();
+            
+            // Eliminar la cita
             $res = $cita->eliminar();
 
             if($res) {

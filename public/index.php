@@ -18,7 +18,8 @@ $router->get('/dating', [PaginasController::class, 'index']);
 $router->post('/dating', [PaginasController::class, 'index']);
 $router->get('/add-date', [DateController::class, 'date']);
 $router->post('/add-date', [DateController::class, 'date']);
-
+$router->get('/date', [DateController::class, 'oneDate']);
+$router->post('/date', [DateController::class, 'oneDate']);
 
 /** AUTH **/
 $router->get('/login', [AuthController::class, 'login']);
@@ -33,7 +34,5 @@ $router->get('/admin', [AdminController::class, 'index']);
 $router->get('/admin/dates', [AdminController::class, 'historial']);
 $router->get('/admin/setting', [AdminController::class, 'setting']);
 $router->post('/admin/setting', [AdminController::class, 'setting']);
-
-$router->get('/view', [PaginasController::class, 'view']);
 
 $router->comprobarRutas();

@@ -7,9 +7,9 @@
     <link rel="stylesheet" type="text/css" href="/dist/css/output.css">
     <title>NombrePagina</title>
 </head>
-<body class="bg-zinc-900" >
+<body class="bg-zinc-900 h-screen" >
     <div class="flex flex-col md:flex-row" >
-        <aside class="flex max-h-80 md:max-h-none md:h-screen md:w-1/3" >
+        <aside class="flex max-h-80 md:max-h-none md:h-screen md:w-1/3 relative sm:sticky top-0" >
             <img src="/build/img/imagenInicio.webp" class="object-cover" >
         </aside>
 
@@ -18,7 +18,7 @@
                 <?php incluirModule("Header", null); ?>
             </header>
 
-            <main  >
+            <main>
                 <?php echo $contenido; ?>
             </main>
         </div>
@@ -30,6 +30,6 @@
 
     </footer>
 
-    <script src="build/js/app.js"></script>
+    <script src="/build/js/app.js"></script>
 </body>
 </html>

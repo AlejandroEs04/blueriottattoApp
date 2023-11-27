@@ -1,5 +1,6 @@
 <?php 
 define('FUNCIONES_URL', __DIR__ . 'funciones.php');
+define('CARPETAS_IMAGENES', $_SERVER['DOCUMENT_ROOT'] . '/imagenes/');
 
 function incluirModule( string $nombre, $contenido ) {
     if( $nombre ) {
