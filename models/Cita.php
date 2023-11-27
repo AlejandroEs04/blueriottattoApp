@@ -21,4 +21,15 @@ class Cita extends ActiveRecord {
         $this->hora = $args["hora"] ?? null;
         $this->finalizada = $args["finalizada"] ?? "0";
     }
+
+    public function validar() {
+        if(!$this->fecha) {
+            self::$alertas["error"][] = "La fecha es obligatoria";
+        }
+        if(!$this->hora) {
+            self::$alertas["error"][] = "La hora es obligatoria";
+        }
+
+        return self::$alertas;
+    }
 }

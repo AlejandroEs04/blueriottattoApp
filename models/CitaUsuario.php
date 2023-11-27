@@ -8,9 +8,10 @@ class CitaUsuario extends ActiveRecord {
     public $fecha;
     public $hora;
     public $nombre;
-    public $apellido;
     public $usuarioID;
     public $numero;
+    public $imagen;
+    public $tamano;
     public $finalizada;
 
     public function __construct($args = []) {
@@ -18,8 +19,9 @@ class CitaUsuario extends ActiveRecord {
         $this->fecha = $args["fecha"];
         $this->hora = $args["hora"];
         $this->nombre = $args["nombre"];
-        $this->apellido = $args["apellido"];
         $this->numero = $args["numero"];
+        $this->imagen = $args["imagen"];
+        $this->tamano = $args["tamano"];
         $this->finalizada = $args["finalizada"];
         $this->usuarioID = $args["usuarioID"];
     }

@@ -31,7 +31,7 @@ class ActiveRecord {
     }
 
     /** CONSULTA SQL PARA CREAR UN OBJETO EN MEMORIA */
-    public static function consultarSQL($query) {
+    public static function consultarSQL($query) {           
         // Consultar la base de datos
         $resultado = self::$db->query($query);
 
@@ -191,5 +191,25 @@ class ActiveRecord {
         $query = "DELETE FROM "  . static::$tabla . " WHERE id = " . self::$db->escape_string($this->id) . " LIMIT 1";
         $resultado = self::$db->query($query);
         return $resultado;
+    }
+
+    public function setImagen($imagen) {
+        // Elimina imagen previa
+        if (!is_null($this->id)) {
+            $this->borrarImagen();
+        }
+
+        // Asignar al atributo de imagen el nombre de la imagen
+        if ($imagen) {
+            $this->imagenURL = $imagen;     
+        }
+    }
+
+    public function borrarImagen() {
+        $existeArchivo =  file_exists(CARPETAS_IMAGENES . $this->imagen);
+
+            if ($existeArchivo) {
+                unlink(CARPETAS_IMAGENES . $this->imagen);
+            }
     }
 }

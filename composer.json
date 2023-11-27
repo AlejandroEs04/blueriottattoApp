@@ -1,20 +1,24 @@
 {
-    "name": "citasapp",
-    "description": "Aplicacion web para generar y administrar las citas por parte del cliente",
+    "name": "2004e/citas-app",
+    "autoload": {
+        "psr-4": {
+            "2004e\\CitasApp\\": "src/"
+        }
+    },
     "authors": [
         {
-            "name": "Alejandro Raphael Estrada Lopez"
+            "name": "Alexanderel04",
+            "email": "2004.estrada.lopez@gmail.com"
         }
     ],
     "require": {
-        
+        "intervention/image": "^2.7"
     },
     "autoload": {
         "psr-4": {
             "Model\\" : "./models",
             "MVC\\" : "./",
-            "Controllers\\" : "./controllers",
-            "Classes\\" : "./classes"
+            "Controllers\\" : "./controllers"
         }
     }
 }
