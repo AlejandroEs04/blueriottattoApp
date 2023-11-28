@@ -73,7 +73,7 @@ class AuthController {
                     $resultado = $usuario->guardar();
 
                     if($resultado) {
-                        header('Location: /add-date');
+                        header('Location: /login');
                     }
                 }
             }

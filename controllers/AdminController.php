@@ -6,6 +6,7 @@ use Model\Cita;
 use Model\DisTatuaje;
 use MVC\Router;
 use Model\CitaUsuario;
+use Model\Usuario;
 use Model\Comercio;
 
 class AdminController {
@@ -73,16 +74,33 @@ class AdminController {
             }
         }
 
+        if($_GET['nombre']) {
+            $citas = [];
+            $citas = CitaUsuario::getName($_GET['nombre']);
+        }
+
         $router->render("admin/history" , [
             'citas' => $citas
         ]);
     }
 
     public static function setting(Router $router) {
+        $usuarios = Usuario::all();
         $comercio = Comercio::all();
 
+        if($_GET['eliminar']) {
+            $usuario = Usuario::whereOne('id', $_GET['id']);
+
+            $res = $usuario->eliminar();
+
+            if($res) {
+                header('Location: /admin/setting');
+            }
+        }
+
         $router->render("admin/setting", [
-            'comercio' => $comercio[0]
+            'comercio' => $comercio[0],
+            'usuarios' => $usuarios
         ]);
     }
 }

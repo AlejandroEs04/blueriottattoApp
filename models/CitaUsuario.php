@@ -25,4 +25,16 @@ class CitaUsuario extends ActiveRecord {
         $this->finalizada = $args["finalizada"];
         $this->usuarioID = $args["usuarioID"];
     }
+
+    public static function getName($nombre) {
+        $query = "SELECT * FROM citasview WHERE nombre like '%". $nombre ."%'";
+        $resultado = self::consultarSQL($query);
+        return $resultado;
+    }
+
+    public static function getCitasFin($usuarioID) {
+        $query = "SELECT * FROM citasview WHERE finalizada = 1 and usuarioID = '" . $usuarioID . "'" ;
+        $resultado = self::consultarSQL($query);
+        return $resultado;
+    }
 }

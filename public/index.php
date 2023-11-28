@@ -13,7 +13,10 @@ $router = new Router();
 /** ZONA PUBLICA **/
 $router->get('/', [PaginasController::class, 'index']);
 $router->post('/', [PaginasController::class, 'index']);
+$router->get('/history', [PaginasController::class, 'history']);
+$router->post('/history', [PaginasController::class, 'history']);
 $router->get('/setting', [PaginasController::class, 'setting']);
+$router->post('/setting', [PaginasController::class, 'setting']);
 $router->get('/dating', [PaginasController::class, 'index']);
 $router->post('/dating', [PaginasController::class, 'index']);
 $router->get('/add-date', [DateController::class, 'date']);

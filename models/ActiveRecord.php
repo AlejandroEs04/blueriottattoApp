@@ -32,7 +32,6 @@ class ActiveRecord {
 
     /** CONSULTA SQL PARA CREAR UN OBJETO EN MEMORIA */
     public static function consultarSQL($query) { 
-        debuguear($query);          
         // Consultar la base de datos
         $resultado = self::$db->query($query);
 

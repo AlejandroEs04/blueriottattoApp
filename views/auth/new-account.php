@@ -58,7 +58,7 @@
                 type="submit"
                 class="px-3 py-2 font-bold text-white rounded-lg bg-blue-600 hover:bg-blue-500 transition-colors"
             >
-                Iniciar Sesion
+                Crear cuenta
             </button>
         </form>
 

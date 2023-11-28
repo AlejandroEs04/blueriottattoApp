@@ -27,11 +27,14 @@ class Router {
 
         /** Agregar las rutas protegidas **/
         $rutas_admin = [
-            '/admin'
+            '/admin',
+            '/admin/dates',
+            '/admin/date'
         ];
 
         $rutas_protegidas = [
-            '/'
+            '/',
+            '/date',
         ];
 
         /** Identificar en que ruta se encuentra el usuario **/
